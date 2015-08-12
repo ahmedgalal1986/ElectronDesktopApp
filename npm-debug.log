@@ -1,0 +1,61 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'bootstrap',
+1 verbose cli   '--save' ]
+2 info using npm@2.11.2
+3 info using node@v0.12.5
+4 verbose install initial load of H:\Workspace\Ahmed\ElectronDesktopApp\package.json
+5 warn package.json myapp@0.1.0 No repository field.
+6 warn package.json myapp@0.1.0 No license field.
+7 verbose installManyTop reading scoped package data from H:\Workspace\Ahmed\ElectronDesktopApp\node_modules\electron\package.json
+8 verbose installManyTop reading scoped package data from H:\Workspace\Ahmed\ElectronDesktopApp\node_modules\jquery\package.json
+9 info package.json jquery@2.1.4 No license field.
+10 verbose readDependencies loading dependencies from H:\Workspace\Ahmed\ElectronDesktopApp\package.json
+11 silly cache add args [ 'bootstrap', null ]
+12 verbose cache add spec bootstrap
+13 silly cache add parsed spec { raw: 'bootstrap',
+13 silly cache add   scope: null,
+13 silly cache add   name: 'bootstrap',
+13 silly cache add   rawSpec: '',
+13 silly cache add   spec: '*',
+13 silly cache add   type: 'range' }
+14 silly addNamed bootstrap@*
+15 verbose addNamed "*" is a valid semver range for bootstrap
+16 silly addNameRange { name: 'bootstrap', range: '*', hasData: false }
+17 silly mapToRegistry name bootstrap
+18 silly mapToRegistry using default registry
+19 silly mapToRegistry registry https://registry.npmjs.org/
+20 silly mapToRegistry uri https://registry.npmjs.org/bootstrap
+21 verbose addNameRange registry:https://registry.npmjs.org/bootstrap not in flight; fetching
+22 verbose request uri https://registry.npmjs.org/bootstrap
+23 verbose request no auth needed
+24 info attempt registry request try #1 at 8:29:28 PM
+25 verbose request id e50e98daf825f9b2
+26 http request GET https://registry.npmjs.org/bootstrap
+27 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND registry.npmjs.org
+28 info attempt registry request try #2 at 8:29:51 PM
+29 http request GET https://registry.npmjs.org/bootstrap
+30 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND registry.npmjs.org
+31 info attempt registry request try #3 at 8:31:03 PM
+32 http request GET https://registry.npmjs.org/bootstrap
+33 verbose stack Error: getaddrinfo ENOTFOUND registry.npmjs.org
+33 verbose stack     at errnoException (dns.js:44:10)
+33 verbose stack     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:94:26)
+34 verbose cwd H:\Workspace\Ahmed\ElectronDesktopApp
+35 error Windows_NT 6.1.7601
+36 error argv "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "bootstrap" "--save"
+37 error node v0.12.5
+38 error npm  v2.11.2
+39 error code ENOTFOUND
+40 error errno ENOTFOUND
+41 error syscall getaddrinfo
+42 error network getaddrinfo ENOTFOUND registry.npmjs.org
+42 error network This is most likely not a problem with npm itself
+42 error network and is related to network connectivity.
+42 error network In most cases you are behind a proxy or have bad network settings.
+42 error network
+42 error network If you are behind a proxy, please make sure that the
+42 error network 'proxy' config is set properly.  See: 'npm help config'
+43 verbose exit [ 1, true ]
