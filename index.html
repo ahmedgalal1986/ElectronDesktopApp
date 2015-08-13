@@ -33,16 +33,16 @@
                    <span data-bind="label">CLICK</span>&nbsp;<span class="caret caret-cus"></span>
                </button>
                <ul class="dropdown-menu cal-dropdown" role="menu">
-                   <li><a id="keyword-click" href="#" >CLICK</a></li>
-                   <li><a id="keyword-type" href="#" >TYPE</a></li>
-                   <li><a id="keyword-select" href="#" onclick="">SELECT</a></li>
-                   <li><a id="keyword-launch" href="#" onclick="">LAUNCH</a></li>
-                   <li><a id="keyword-terminate" href="#" onclick="">TERMINATE</a></li>
-                   <li><a id="keyword-dblclick" href="#" onclick="">DOUBLE-CLICK</a></li>
-                   <li><a id="keyword-rightclick" href="#" onclick="">RIGHT-CLICK</a></li>
-                   <li><a id="keyword-mousehover" href="#" onclick="">MOUSE-HOVER</a></li>
-                   <li><a id="keyword-dragdrop" href="#" onclick="">DRAG-DROP</a></li>
-                   <li><a id="keyword-navigate" href="#" onclick="">NAVIGATE</a></li>
+                   <li><a class="keyword-click" href="#" >CLICK</a></li>
+                   <li><a class="keyword-type" href="#" >TYPE</a></li>
+                   <li><a class="keyword-select" href="#" >SELECT</a></li>
+                   <li><a class="keyword-launch" href="#" >LAUNCH</a></li>
+                   <li><a class="keyword-terminate" href="#" >TERMINATE</a></li>
+                   <li><a class="keyword-dblclick" href="#" >DOUBLE-CLICK</a></li>
+                   <li><a class="keyword-rightclick" href="#" >RIGHT-CLICK</a></li>
+                   <li><a class="keyword-mousehover" href="#" >MOUSE-HOVER</a></li>
+                   <li><a class="keyword-dragdrop" href="#" >DRAG-DROP</a></li>
+                   <li><a class="keyword-navigate" href="#" >NAVIGATE</a></li>
                </ul>
             </div>
           </td>
@@ -87,6 +87,18 @@
   <script>
     window.$ = window.jQuery = require('jquery');
     // console.log( [$, jQuery ]);
+
+    //for dropdown menu
+    $( document.body ).on( 'click', '.dropdown-menu li', function( event ) {
+
+     var $target = $( event.currentTarget );
+     $target.closest( '.btn-group' )
+        .find( '[data-bind="label"]' ).text( $target.text() )
+           .end()
+        .children( '.dropdown-toggle' ).dropdown( 'toggle' );
+     return false;
+  });
+
   </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <!-- <script src="lib/jquery-1.11.3.min.js"></script> -->
